@@ -1,8 +1,12 @@
-#Math Library
+# Math Library
 
 ## How to use?
-1)Upload files "com_reader.cpp" and "com_reader.h" to the root where the project is assembling.
+1)Upload files "class_matrix.cpp" and "header_matrix.hpp" to the root where the project is assembling.
 
-2)add com_reader.h
+2)add header_matrix.hpp
     
-    #include "com_reader.h"
+    #include "header_matrix.hpp"
+    
+3)Matrix objects are created like this. 
+
+    Matrix M(2, 2, 0); //Here, the first two numbers are the number of rows and columns, and the last optional is the primary fill element.
