@@ -1,5 +1,5 @@
 #include<iostream>
-#include "header_matrix.hpp"
+#include "MathLib.hpp"
 
 int main(void)
 {
@@ -11,4 +11,8 @@ int main(void)
 	l = m + n;
 
 	l.print();
+
+	Vector V(10, 1.57, 1.57, 0);
+
+	system("pause");
 }

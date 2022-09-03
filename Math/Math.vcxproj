@@ -20,9 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header_matrix.hpp" />
+    <ClInclude Include="header_vector.hpp" />
+    <ClInclude Include="MathLib.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="class_matrix.cpp" />
+    <ClCompile Include="class_vector.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
