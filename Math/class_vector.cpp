@@ -16,3 +16,29 @@ Vector::Vector(double leng, double alpha, double beta, double gamma) : leng_(len
 	y_ = leng_ * cos(beta_);
 	z_ = leng_ * cos(gamma_);
 }
+
+Vector& Vector::operator = (Vector const& V)
+{
+	leng_ = V.leng_;
+	x_ = V.x_; y_ = V.y_; z_ = V.z_;
+	alpha_ = V.alpha_; beta_ = V.beta_; gamma_ = V.gamma_;
+
+	return *this;
+}
+
+Vector& Vector::operator - ()
+{
+	x_ = -x_;
+	y_ = -y_;
+	z_ = -z_;
+	alpha_ += pi;
+	beta_ += pi;
+	gamma_ += pi;
+
+	return *this;
+}
+
+void Vector::printData()
+{
+	std::cerr << x_ << " " << y_ << " " << z_;
+}

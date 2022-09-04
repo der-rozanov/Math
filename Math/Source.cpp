@@ -13,6 +13,10 @@ int main(void)
 	l.print();
 
 	Vector V(10, 1.57, 1.57, 0);
+	Vector N(0, 0, 0, 1, 1, 1);
+
+	V = N;
+	V.printData();
 
 	system("pause");
 }
