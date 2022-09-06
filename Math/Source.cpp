@@ -3,19 +3,12 @@
 
 int main(void)
 {
-	Matrix m(2, 2, 10);
+	Vector V(1, 1, 0, 0, 0, 0);
+	
+	V.printData();
 
-	Matrix n(2, 2, 5);
+	V = -V;
 
-	Matrix l(2, 2);
-	l = m + n;
-
-	l.print();
-
-	Vector V(10, 1.57, 1.57, 0);
-	Vector N(0, 0, 0, 1, 1, 1);
-
-	V = N;
 	V.printData();
 
 	system("pause");

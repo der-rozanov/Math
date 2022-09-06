@@ -16,14 +16,19 @@ class Vector
 		/// <param name="alpha">angle between vector and X asix</param>
 		/// <param name="beta">angle between vector and Y asix</param>
 		/// <param name="gamma">angle between vector and Z asix</param>
-		Vector(double leng, double alpha, double beta, double gamma);
+		Vector(double x1, double y1, double z1, double leng, double alpha, double beta, double gamma);
 
 		Vector& operator = (Vector const& V);
 		Vector& operator - ();
+		Vector& operator + (Vector const& V1);
+		//Vector& operator + (Vector const& V);
 
 		void printData();
+		
 	private:
-		double x_, y_, z_;
+		double x1_,x2_, y1_,y2_, z1_,z2_;
 		double leng_;
 		double alpha_, beta_, gamma_;
 };
+
+void swap(double& a, double& b);
