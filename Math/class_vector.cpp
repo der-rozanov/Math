@@ -50,9 +50,9 @@ Vector& Vector::operator * (double num)
 {
 	if (num < 0) *this = -*this;
 
-	x2_ = (x2_ - x1_) * -num + x1_;
-	y2_ = (y2_ - y1_) * -num + y1_;
-	z2_ = (z2_ - z1_) * -num + z1_;
+	x2_ = (x2_ - x1_) * num + x1_;
+	y2_ = (y2_ - y1_) * num + y1_;
+	z2_ = (z2_ - z1_) * num + z1_;
 
 
 	return *this;
