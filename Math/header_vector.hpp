@@ -1,4 +1,5 @@
 #pragma once
+#include "header_matrix.hpp"
 #include <iostream>
 #define pi 3.14159265358979323846
 
@@ -20,8 +21,12 @@ class Vector
 
 		Vector& operator = (Vector const& V);
 		Vector& operator - ();
-		Vector& operator + (Vector const& V1);
-		//Vector& operator + (Vector const& V);
+		Vector& operator + (Vector const& V1); //решить проблему с некорректными значениями углов
+		Vector& operator * (double num); //решить проблему с некорректными значениями углов
+
+		Matrix getCoordinates();
+		double getLength();
+		Matrix getAngles();
 
 		void printData();
 		

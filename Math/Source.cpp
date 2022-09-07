@@ -7,7 +7,7 @@ int main(void)
 	
 	V.printData();
 
-	V = -V;
+	V = V * 10;
 
 	V.printData();
 

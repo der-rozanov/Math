@@ -1,4 +1,5 @@
 #include "header_vector.hpp"
+#include "header_matrix.hpp"
 #include <cmath>
 
 Vector::Vector(double x2, double y2, double z2, double x1, double y1, double z1) :
@@ -45,12 +46,39 @@ Vector& Vector::operator + (Vector const& V1)
 	return Out;
 }
 
+Vector& Vector::operator * (double num)
+{
+	Vector out(x1_, y1_, z1_, leng_ * num, alpha_, beta_, gamma_);
+	return out;
+}
+
 void Vector::printData()
 {
 	std::cerr << "Begin: " << x1_ << " " << y1_ << " " << z1_ << "\n";
 	std::cerr << "End: " << x2_ << " " << y2_ << " " << z2_ << "\n";
 	std::cerr << "Length: " << leng_ << "\n";
 	std::cerr << "Alpha: " << alpha_ << "\nBeta: " << beta_ << "\nGamma: " << gamma_<<"\n";
+}
+
+double Vector::getLength()
+{
+	return leng_;
+}
+
+Matrix Vector::getAngles()
+{
+	Matrix M(1, 3);
+	M(0, 0) = alpha_; M(0, 1) = beta_; M(0, 2) = gamma_;
+
+	return M;
+}
+
+Matrix Vector::getCoordinates()
+{
+	Matrix M(2, 3);
+	M(0, 0) = x1_; M(0, 1) = y1_; M(0, 2) = z1_;
+	M(1, 0) = x2_; M(1, 1) = y2_; M(1, 2) = z2_;
+	return M;
 }
 
 void swap(double& a, double& b)

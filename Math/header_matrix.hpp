@@ -8,7 +8,7 @@
 class Matrix
 {
 	public:
-		Matrix(size_t lines, size_t columns, double def_elem = 0);
+		Matrix(size_t lines=1, size_t columns=1, double def_elem = 0);
 		Matrix(Matrix const& M);
 		~Matrix();
 
