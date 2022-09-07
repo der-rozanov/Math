@@ -94,7 +94,7 @@ void swap(double& a, double& b)
 	b = vsp;
 }
 
-double scalarMultiplication(Vector v1, Vector v2)
+double scalarMultiplication(Vector& v1, Vector& v2)
 {
 	Matrix m1 = v1.getCoordinates();
 	Matrix m2 = v2.getCoordinates();
