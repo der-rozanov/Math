@@ -3,13 +3,10 @@
 
 int main(void)
 {
-	Vector V(1, 1, 0, 0, 0, 0);
+	Vector V(1, 2, 0);
+	Vector M(4, 8, 0);
 	
-	V.printData();
-
-	V = V * 2;
-
-	V.printData();
+	std::cerr << scalarMultiplication(V, M);
 
 	system("pause");
 }

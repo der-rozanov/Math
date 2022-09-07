@@ -93,3 +93,12 @@ void swap(double& a, double& b)
 	a = b;
 	b = vsp;
 }
+
+double scalarMultiplication(Vector v1, Vector v2)
+{
+	Matrix m1 = v1.getCoordinates();
+	Matrix m2 = v2.getCoordinates();
+	double x1 = m1(1, 0) - m1(0, 0); double y1 = m1(1, 1) - m1(0, 1); double z1 = m1(1, 2) - m1(0, 2);
+	double x2 = m2(1, 0) - m2(0, 0); double y2 = m2(1, 1) - m2(0, 1); double z2 = m2(1, 2) - m2(0, 2);
+	return x1 * x2 + y1 * y2 + z1 * z2;
+}

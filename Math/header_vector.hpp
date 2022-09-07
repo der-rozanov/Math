@@ -9,7 +9,7 @@ class Vector
 		/// <summary>
 		/// Constructor by coordinates
 		/// </summary>
-		Vector(double x2, double y2, double z2, double x1 , double y1 , double z1 );
+		Vector(double x2, double y2, double z2, double x1 = 0 , double y1 = 0 , double z1 = 0);
 		/// <summary>
 		/// Constructor by length and angles
 		/// </summary>
@@ -37,3 +37,5 @@ class Vector
 };
 
 void swap(double& a, double& b);
+
+double scalarMultiplication(Vector v1, Vector v2);
