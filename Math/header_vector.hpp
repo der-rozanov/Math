@@ -27,6 +27,7 @@ class Vector
 		Matrix getCoordinates();
 		double getLength();
 		Matrix getAngles();
+		Matrix getVector();
 
 		void printData();
 		

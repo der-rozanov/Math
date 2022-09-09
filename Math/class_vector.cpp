@@ -87,6 +87,14 @@ Matrix Vector::getCoordinates()
 	return M;
 }
 
+Matrix Vector::getVector()
+{
+	Matrix M(1, 3);
+	M(0, 0) = x2_ - x1_; M(0, 1) = y2_ - y1_; M(0, 2) = z2_ - z1_;
+
+	return M;
+}
+
 void swap(double& a, double& b)
 {
 	double vsp = a;
@@ -101,4 +109,9 @@ double scalarMultiplication(Vector& v1, Vector& v2)
 	double x1 = m1(1, 0) - m1(0, 0); double y1 = m1(1, 1) - m1(0, 1); double z1 = m1(1, 2) - m1(0, 2);
 	double x2 = m2(1, 0) - m2(0, 0); double y2 = m2(1, 1) - m2(0, 1); double z2 = m2(1, 2) - m2(0, 2);
 	return x1 * x2 + y1 * y2 + z1 * z2;
+}
+
+Vector vectorMultiplication(Vector& v1, Vector& v2)
+{
+	//later
 }
