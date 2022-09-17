@@ -163,3 +163,15 @@ void Matrix::print()
 		std::cerr << std::endl;
 	}
 }
+
+double Matrix::det2()
+{
+	if ((lines_ != 2) || (columns_ != 2))
+	{
+		return NULL;
+	}
+	else
+	{
+		return (data_[0][0] * data_[1][1] - data_[0][1] * data_[1][0]);
+	}
+}

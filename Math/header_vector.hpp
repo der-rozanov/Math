@@ -40,3 +40,5 @@ class Vector
 void swap(double& a, double& b);
 
 double scalarMultiplication(Vector& v1, Vector& v2);
+
+Vector vectorMultiplication(Vector& v1, Vector& v2);

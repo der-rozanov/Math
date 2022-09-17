@@ -3,10 +3,14 @@
 
 int main(void)
 {
-	Vector V(1, 2, 0);
-	Vector M(4, 8, 0);
-	
-	std::cerr << scalarMultiplication(V, M);
+	Vector V1(1, 0, 0);
+	Vector V2(0, 0, 1);
+
+	Vector V3 = vectorMultiplication(V1, V2);
+
+	Matrix m = V3.getVector();
+
+	m.print();
 
 	system("pause");
 }

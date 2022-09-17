@@ -19,6 +19,7 @@ class Matrix
 		Matrix operator + (Matrix const& M);
 		Matrix operator * (Matrix const& M);
 		Matrix T(Matrix const& M);
+		double det2();
 	
 		//double det();
 		void print();

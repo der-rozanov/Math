@@ -113,5 +113,13 @@ double scalarMultiplication(Vector& v1, Vector& v2)
 
 Vector vectorMultiplication(Vector& v1, Vector& v2)
 {
-	//later
+	Matrix M1 = v1.getVector();
+	Matrix M2 = v2.getVector();
+
+	double i = (M1(0, 1) * M2(0, 2)) - (M1(0, 2) * M2(0, 1));
+	double j = (M1(0, 0) * M2(0, 2)) - (M1(0, 2) * M2(0, 0));
+	double k = (M1(0, 0) * M2(0, 1)) - (M1(0, 1) * M2(0, 0));
+
+	Vector V(i, j, k);
+	return V;
 }
