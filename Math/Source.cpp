@@ -1,16 +1,14 @@
 #include<iostream>
 #include "MathLib.hpp"
+#include<vector>
 
 int main(void)
 {
-	Vector V1(1, 0, 0);
-	Vector V2(0, 0, 1);
+	std::vector<double> arr = { 70,71,72,74,74,75,76,76,76,77 };
+	Selection s(arr);
 
-	Vector V3 = vectorMultiplication(V1, V2);
+	s.print();
 
-	Matrix m = V3.getVector();
-
-	m.print();
-
+	std::cout << s.standardDeviation();
 	system("pause");
 }

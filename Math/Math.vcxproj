@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header_matrix.hpp" />
+    <ClInclude Include="header_statistics.h" />
     <ClInclude Include="header_vector.hpp" />
     <ClInclude Include="MathLib.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="class_matrix.cpp" />
+    <ClCompile Include="class_statistics.cpp" />
     <ClCompile Include="class_vector.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
