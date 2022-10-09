@@ -4,11 +4,12 @@
 
 int main(void)
 {
-	std::vector<double> arr = { 70,71,72,74,74,75,76,76,76,77 };
+	std::vector<double> arr = { 3.15,3.08,3.05,3.05,3.02,2.99,2.97,3.04,3.05,3.07 };
 	Selection s(arr);
+
+	std::cout << s.relativeError(3)<<"\n";
 
 	s.print();
 
-	std::cout << s.standardDeviation();
 	system("pause");
 }

@@ -1,6 +1,7 @@
 #include "header_statistics.h"
 Selection::Selection(std::vector<double> input)
 {
+	input_size = input.size();
 	aver_expec = 0;
 	std::sort(input.begin(), input.end());
 	std::vector<double>::iterator it;
@@ -42,6 +43,22 @@ double Selection::variance()
 double Selection::standardDeviation()
 {
 	return sqrt(variance());
+}
+
+double Selection::relativeError(double norm_value)
+{
+	std::vector<double>::iterator sel_it = select.begin();
+	std::vector<double>::iterator prob_it = probab.begin();
+	double sum = 0;
+
+	while (sel_it < select.end())
+	{
+		sum += (norm_value - *sel_it) * *prob_it * input_size;
+
+		sel_it++;
+		prob_it++;
+	}
+	return abs(sum / pow(input_size,2));
 }
 
 void Selection::print()

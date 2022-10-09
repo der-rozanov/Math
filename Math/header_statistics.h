@@ -11,10 +11,12 @@ class Selection
 
 		double variance();
 		double standardDeviation();
+		double relativeError(double norm_value);
 
 		void print();
 	private:
 		std::vector<double> select;
 		std::vector<double> probab;
 		double aver_expec;
+		double input_size;
 };
