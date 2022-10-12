@@ -30,6 +30,11 @@ Selection::Selection(std::vector<double> input)
 	aver_expec = aver_expec / input.size();
 }
 
+double Selection::getAverage()
+{
+	return aver_expec;
+}
+
 double Selection::variance()
 {
 	double var = 0;
@@ -59,6 +64,38 @@ double Selection::relativeError(double norm_value)
 		prob_it++;
 	}
 	return abs(sum / pow(input_size,2));
+}
+
+std::vector<double> Selection::getSelection()
+{
+	return select;
+}
+
+std::vector<double> Selection::getProbability()
+{
+	return probab;
+}
+
+double Selection::getMaxElement()
+{
+	return select[select.size()-1];
+}
+
+double Selection::getMinElement()
+{
+	return select[0];
+}
+
+double Selection::getComElement()
+{
+	auto it = std::minmax_element(probab.begin(), probab.end());
+	return select[std::distance(probab.begin(), it.second)];
+}
+
+double Selection::getRareElement()
+{
+	auto it = std::minmax_element(probab.begin(), probab.end());
+	return select[std::distance(probab.begin(), it.first)];
 }
 
 void Selection::print()
